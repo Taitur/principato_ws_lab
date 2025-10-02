@@ -5,12 +5,27 @@
   <title>Principato Italian Cuisine</title>
   <link href="css/style.css" rel="stylesheet" />
 	<script>
-    window.onload = () => {
-      let image = document.getElementsById('image');
-      image.onclick = () =>{
-        alert('Magia')
+    ariketak = function() {
+      let irud = document.getElementById('image');
+      irud.onclick = () => {
+        alert("pato");
+      };
+
+      let usspass = document.getElementsByTagName('input');
+      let usr = usspass[0];
+      let pass = usspass[1];
+
+      usr.onblur = () => {
+        usr.value =  "zure@gmail";
       }
+
+      usr.onfocus = () => {
+        usr.value = "";
+      }
+
+      
     }
+    window.onload = ariketak;
   </script>
 </head>
 <body>
