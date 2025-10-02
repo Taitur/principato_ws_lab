@@ -24,7 +24,11 @@
         usr.value = "";
       }
       //Ariketa3
-      //dsajkdlak
+      let lista = document.getElementById('combobox');
+      lista.addEventListener(aukeraprint,"select");
+      aukeraprint = () => {
+          console.log(lista.value);
+      }
 
       
     }
