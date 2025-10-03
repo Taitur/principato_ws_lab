@@ -25,8 +25,9 @@
       }
       //Ariketa3
       let lista = document.getElementById('combobox');
+      
        aukeraprint = () => {
-          console.log(lista.innerText);
+          console.log(lista.options[lista.selectedIndex].innerText);
       }
       lista.addEventListener("change", aukeraprint);
      
