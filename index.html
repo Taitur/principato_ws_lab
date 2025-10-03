@@ -40,13 +40,20 @@
       formulario.addEventListener("submit", ferantzuna);
       //Ariketa5
       let argaz = document.getElementById('image');
-      let carrArgazkiak = ["../irudiak_Principato/limoia.jpg","../irudiak_Principato/mandarinak.jpg", "../irudiak_Principato/marrubiak.jpg", "../irudiak_Principato/meloia.jpg", "../irudiak_Principato/sagarrak.jpg", "../irudiak_Principato/sesamoa.jpg"];
+      let carrArgazkiak = ["irudiak_Principato/limoia.jpg","irudiak_Principato/mandarinak.jpg", "irudiak_Principato/marrubiak.jpg", "irudiak_Principato/meloia.jpg", "irudiak_Principato/sagarrak.jpg", "irudiak_Principato/sesamoa.jpg"];
+      let ind = 0;
       erlojua = () => {
         
+        argaz.style.backgroundImage = "url('"+carrArgazkiak[ind]+"')";
+        if(ind < carrArgazkiak.length - 1){
+          ind++;
+        } else {
+          ind = 0;
+        }  
       }
       setInterval(erlojua, 3000);
       argGeldi = () => {
-        argaz
+        clearInterval(erlojua);
       }
       argaz.addEventListener("click", argGeldi);
       
