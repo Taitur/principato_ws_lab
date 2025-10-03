@@ -37,8 +37,18 @@
           alert('Saio zuzena, '+ erab.value +' erabiltzaileren atalera eramaten...');
 
       }
-      formulario.addEventListener("submit", ferantzuna)
-
+      formulario.addEventListener("submit", ferantzuna);
+      //Ariketa5
+      let argaz = document.getElementById('image');
+      let carrArgazkiak = ["../irudiak_Principato/limoia.jpg","../irudiak_Principato/mandarinak.jpg", "../irudiak_Principato/marrubiak.jpg", "../irudiak_Principato/meloia.jpg", "../irudiak_Principato/sagarrak.jpg", "../irudiak_Principato/sesamoa.jpg"];
+      erlojua = () => {
+        
+      }
+      setInterval(erlojua, 3000);
+      argGeldi = () => {
+        argaz
+      }
+      argaz.addEventListener("click", argGeldi);
       
     }
     window.onload = ariketak;
