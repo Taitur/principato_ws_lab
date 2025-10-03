@@ -17,11 +17,11 @@
       let pass = usspass[1];
 
       usr.onblur = () => {
-        usr.value =  "zure@gmail";
+        usr.placeholder =  "zure@gmail";
       }
 
       usr.onfocus = () => {
-        usr.value = "";
+        usr.placeholder = "";
       }
       //Ariketa3
       let lista = document.getElementById('combobox');
@@ -30,7 +30,14 @@
           console.log(lista.options[lista.selectedIndex].innerText);
       }
       lista.addEventListener("change", aukeraprint);
-     
+      //Ariketa4
+      let formulario = document.getElementById('form');
+      let erab = document.getElementById('user');
+      ferantzuna = () => {
+          alert('Saio zuzena, '+ erab.value +' erabiltzaileren atalera eramaten...');
+
+      }
+      formulario.addEventListener("submit", ferantzuna)
 
       
     }
@@ -58,8 +65,8 @@
      <h3>Last Recipies</h3>
     </div>
     </div>
-  <div id="login"><form id="form" method="post" action="http://YOUR_DOMAIN_HERE/login/login.php">
-  Username: <input type="text" name="username" size="15" id="user" value="zure@gmail"/><br />
+  <div id="login"><form id="form" method="post" >
+  Username: <input type="text" name="username" size="15" id="user" placeholder="zure@gmail"/><br />
   <br />Password: <input type="password" name="passwort" id="pass" size="15" /><br />
   <div align="center">
   <br /><input type="submit" value="Login" />
